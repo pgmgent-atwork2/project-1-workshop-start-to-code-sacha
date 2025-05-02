@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | Tutorial</title>
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/tutorial.css">
+</head>
+
+<body>
+    <header class="quiz__header">
+        <h1 class="quiz__title">Tutorial: Een Quiz-Site Maken</h1>
+        <a href="index.html" class="quiz__button quiz__button--tutorial">Quiz</a>
+    </header>
+    <main class="tutorial">
+        <section>
+            <h2>Inleiding</h2>
+            <p>Welkom bij dit tutorial! Vandaag gaan we een interactieve quiz-site maken met behulp van HTML, CSS en
+                JavaScript. Dit project is perfect voor beginners die zich willen vertrouwd maken met de basis van
+                webontwikkeling.</p>
+        </section>
+
+        <section>
+            <h2>Stap 1: Je Ontwikkelomgeving Voorbereiden</h2>
+            <ol>
+                <li>Maak een map voor je project:
+                    <ul>
+                        <li>Maak een map genaamd <code>project1</code> op je computer.</li>
+                    </ul>
+                </li>
+                <li>Maak de basisbestanden:
+                    <ul>
+                        <li>In de map <code>project1</code>, maak een submap genaamd <code>src</code>.</li>
+                        <li>In de map <code>src</code>, maak een submap genaamd <code>css</code>.</li>
+                        <li>In de map <code>src/css</code>, maak de volgende bestanden: <code>main.css</code>,
+                            <code>quiz.css</code>, <code>tutorial.css</code> en <code>variable.css</code>.
+                        </li>
+                        <li>In de map <code>src</code>, maak een bestand genaamd <code>script.js</code>.</li>
+                        <li>In de map <code>project1</code>, maak de bestanden <code>index.html</code> en
+                            <code>tutorial.html</code>.
+                        </li>
+                        <li>Maak een bestand <code>questions.json</code> in de map <code>src</code>.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Stap 2: De HTML-Structuur Maken</h2>
+            <p>Open <code>index.html</code> en voeg de volgende code toe:</p>
+            <pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="nl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Quiz&lt;/title&gt;
+    &lt;link rel="stylesheet" href="src/css/main.css"&gt;
+&lt;/head&gt;
+</code>
+</pre>
+
+            <ul>
+                <li><code>&lt;!DOCTYPE html&gt;</code>: Dit is de declaratie die aangeeft dat dit een HTML5-document is.
+                </li>
+                <li><code>&lt;head&gt;</code>: Dit is de sectie waarin metadata over het document wordt geplaatst, zoals
+                    de karakterset en de titel van de pagina.</li>
+                <li><code>&lt;title&gt;Quiz&lt;/title&gt;</code>: Dit is de titel van de pagina die in de browsertab
+                    wordt weergegeven.</li>
+                <li><code>&lt;link rel="stylesheet" href="src/css/main.css"&gt;</code>: Dit koppelt het CSS-bestand aan
+                    het HTML-document.</li>
+            </ul>
+        <pre>
+            <code>
+&lt;body&gt;
+    &lt;header class="quiz__header"&gt;
+        &lt;h1 class="quiz__title"&gt;Quiz&lt;/h1&gt;
+        &lt;a href="tutorial.html" class="quiz__button quiz__button--tutorial"&gt;Tutorial&lt;/a&gt;
+    &lt;/header&gt;
+    &lt;main class="quiz"&gt;
+        &lt;div class="quiz__category"&gt;
+            &lt;label for="categorySelect" class="quiz__label"&gt;Kies een categorie:&lt;/label&gt;
+            &lt;select id="categorySelect" class="quiz__select"&gt;
+                &lt;option value="coderen"&gt;Coderen&lt;/option&gt;
+                &lt;option value="natuur"&gt;Natuur&lt;/option&gt;
+                &lt;option value="geschiedenis"&gt;Geschiedenis&lt;/option&gt;
+                &lt;option value="sport"&gt;Sport&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+
+        &lt;button class="quiz__button quiz__button--start" onclick="startQuiz()"&gt;Start Quiz&lt;/button&gt;
+
+        &lt;div id="question" class="quiz__question"&gt;&lt;/div&gt;
+        &lt;div id="choices" class="quiz__choices"&gt;&lt;/div&gt;
+        &lt;div id="result" class="quiz__result"&gt;&lt;/div&gt;
+
+        &lt;button id="nextBtn" class="quiz__button quiz__button--next" style="display:none;" onclick="nextQuestion()"&gt;Volgende vraag&lt;/button&gt;
+    &lt;/main&gt;
+
+    &lt;script src="src/script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+            </pre>
+            <p>Laten we deze code stap voor stap uitleggen:</p>
+            <ul>
+                <li><code>&lt;body&gt;</code>: Dit is de sectie waarin de inhoud van de pagina wordt geplaatst.</li>
+                <li><code>&lt;header&gt;</code>: Dit is de header van de pagina, die de titel en een link naar het
+                    tutorial bevat.</li>
+                <li><code>&lt;main&gt;</code>: Dit is de hoofdinhoud van de pagina, die de quiz-elementen bevat.</li>
+                <li><code>&lt;script src="src/script.js"&gt;&lt;/script&gt;</code>: Dit koppelt het JavaScript-bestand
+                    aan het HTML-document.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Stap 3: Stijlen Toevoegen met CSS</h2>
+            <p>In deze stap gaan we de stijlen toevoegen aan onze quiz-site. We gebruiken drie CSS-bestanden:
+                <code>variable.css</code>, <code>quiz.css</code> en <code>tutorial.css</code>. Deze bestanden worden
+                geïmporteerd in <code>main.css</code>.
+            </p>
+
+            <h3>variable.css</h3>
+            <p>Dit bestand bevat de basisstijlen die overal in onze site gebruikt worden.</p>
+            <pre>
+        <code>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        body {
+          font-family: "Arial", sans-serif;
+          background-color: #f0f8ff;
+          height: 100vh;
+          color: #333;
+          line-height: 1.6;
+          margin: 20px;
+        }
+        h1,
+        h2,
+        h3 {
+          color: #2a9d8f;
+        }
+        code {
+          background-color: #f0f0f0;
+          padding: 2px 4px;
+          border-radius: 4px;
+        }
+        pre {
+          background-color: #f0f0f0;
+          padding: 10px;
+          border-radius: 4px;
+          overflow-x: auto;
+        }
+        </code>
+            </pre>
+            <p>Laten we deze stijlen uitleggen:</p>
+            <ul>
+                <li><code>* { margin: 0; padding: 0; box-sizing: border-box; }</code>: Dit zet de standaardmarges en
+                    paddings op nul en stelt de box-sizing in op border-box voor alle elementen.</li>
+                <li><code>body { ... }</code>: Dit stelt de stijlen voor het body-element in, zoals de achtergrondkleur,
+                    het lettertype, de tekstkleur en de lijnhoogte.</li>
+                <li><code>h1, h2, h3 { ... }</code>: Dit stelt de tekstkleur in voor de kopteksten.</li>
+                <li><code>code { ... }</code>: Dit stelt de stijlen in voor code-elementen, zoals de achtergrondkleur en
+                    de paddings.</li>
+                <li><code>pre { ... }</code>: Dit stelt de stijlen in voor pre-elementen, zoals de achtergrondkleur, de
+                    paddings en de overflow.</li>
+            </ul>
+
+            <h3>quiz.css</h3>
+            <p>Dit bestand bevat de stijlen specifiek voor de quiz-componenten.</p>
+            <pre>
+        <code>
+        .quiz {
+          background-color: #ffffff;
+          border-radius: 0.5rem;
+          margin: auto;
+          padding: 1.25rem;
+          max-width: 60%;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+        }
+        
+        .quiz__header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 2rem 6rem;
+        }
+        
+        .quiz__title {
+          color: #2a9d8f;
+          font-size: 2em;
+        }
+        
+        .quiz__button--start {
+          margin-bottom: 4rem;
+        }
+        
+        .quiz__button--tutorial {
+          text-decoration: none;
+        }
+        
+        .quiz__button {
+          background-color: #2a9d8f;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          font-size: 1em;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          margin-top: 10px;
+        }
+        
+        .quiz__button--tutorial:hover,
+        .quiz__button--start:hover,
+        .quiz__button--next:hover {
+          background-color: #264653;
+        }
+        
+        .quiz__category {
+          margin-bottom: 20px;
+        }
+        
+        .quiz__label {
+          display: block;
+          margin-bottom: 5px;
+          color: #2a9d8f;
+          font-weight: bold;
+        }
+        
+        .quiz__select {
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+          width: 100%;
+        }
+        
+        .quiz__question {
+          font-size: 1.5em;
+          font-weight: bold;
+          margin-bottom: 15px;
+          color: #2a9d8f;
+        }
+        
+        .quiz__choices {
+          list-style-type: none;
+          padding: 0;
+        }
+        
+        .quiz__choices button {
+          background-color: #2a9d8f;
+          color: white;
+          padding: 12px 20px;
+          margin: 10px 0;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          width: 100%;
+          text-align: left;
+        }
+        
+        .quiz__choices button:hover {
+          background-color: #264653;
+        }
+        
+        .quiz__result {
+          text-align: center;
+          margin-top: 20px;
+          color: #e76f51;
+          font-size: 1.2em;
+        }
+        
+        @media (max-width: 600px) {
+          .quiz {
+            width: 90%;
+          }
+        }
+        </code>
+            </pre>
+            <p>Laten we deze stijlen uitleggen:</p>
+            <ul>
+                <li><code>.quiz { ... }</code>: Dit stelt de stijlen voor het quiz-element in, zoals de
+                    achtergrondkleur, de afgeronde hoeken, de marges, de paddings, de maximale breedte en de schaduw.
+                </li>
+                <li><code>.quiz__header { ... }</code>: Dit stelt de stijlen voor de header in, zoals de flexbox-layout,
+                    de uitlijning en de paddings.</li>
+                <li><code>.quiz__title { ... }</code>: Dit stelt de stijlen voor de titel in, zoals de tekstkleur en de
+                    lettergrootte.</li>
+                <li><code>.quiz__button--start { ... }</code>: Dit stelt de ondermarge voor de startknop in.</li>
+                <li><code>.quiz__button--tutorial { ... }</code>: Dit verwijdert de onderstreping voor de tutorial-link.
+                </li>
+                <li><code>.quiz__button { ... }</code>: Dit stelt de stijlen voor de knoppen in, zoals de
+                    achtergrondkleur, de tekstkleur, de paddings, de afgeronde hoeken, de lettergrootte, de cursor en de
+                    hover-effect.</li>
+                <li><code>.quiz__category { ... }</code>: Dit stelt de ondermarge voor de categorie-sectie in.</li>
+                <li><code>.quiz__label { ... }</code>: Dit stelt de stijlen voor het label in, zoals de tekstkleur en de
+                    letterdikte.</li>
+                <li><code>.quiz__select { ... }</code>: Dit stelt de stijlen voor de selectiebox in, zoals de paddings,
+                    de afgeronde hoeken en de breedte.</li>
+                <li><code>.quiz__question { ... }</code>: Dit stelt de stijlen voor de vraag in, zoals de tekstkleur en
+                    de lettergrootte.</li>
+                <li><code>.quiz__choices { ... }</code>: Dit verwijdert de lijststijl voor de keuzes.</li>
+                <li><code>.quiz__choices button { ... }</code>: Dit stelt de stijlen voor de keuze-knoppen in, zoals de
+                    achtergrondkleur, de tekstkleur, de paddings, de afgeronde hoeken, de cursor en de hover-effect.
+                </li>
+                <li><code>.quiz__result { ... }</code>: Dit stelt de stijlen voor het resultaat in, zoals de tekstkleur
+                    en de lettergrootte.</li>
+                <li><code>@media (max-width: 600px) { ... }</code>: Dit is een media query die de breedte van het
+                    quiz-element aanpast voor kleinere schermen.</li>
+            </ul>
+
+            <h3>tutorial.css</h3>
+            <p>Dit bestand bevat de stijlen specifiek voor de tutorial-pagina.</p>
+            <pre>
+        <code>
+        .tutorial {
+            padding: 2rem 5rem;
+        }
+        </code>
+            </pre>
+            <p>Laten we deze stijlen uitleggen:</p>
+            <ul>
+                <li><code>.tutorial { ... }</code>: Dit stelt de paddings in voor de tutorial-sectie.</li>
+            </ul>
+        </section>
+
+
+        <section>
+            <h2>Stap 4: Logica Toevoegen met JavaScript</h2>
+            <p>Open <code>src/script.js</code> en voeg de volgende code toe:</p>
+            <pre>
+<code>
+// DOM-selectoren
+const categorySelect = document.getElementById("categorySelect");
+const questionElement = document.getElementById("question");
+const choicesElement = document.getElementById("choices");
+const resultElement = document.getElementById("result");
+const nextBtn = document.getElementById("nextBtn");
+
+// Quiz-status
+const quizState = {
+  questionsByCategory: {},
+  selectedQuestions: [],
+  currentQuestion: 0,
+  score: 0,
+};
+
+// Vragen laden vanuit het JSON-bestand
+fetch("src/questions.json")
+  .then((res) => res.json())
+  .then((data) => {
+    quizState.questionsByCategory = data;
+  })
+  .catch((error) => {
+    console.error("Fout bij het laden van de gegevens:", error);
+  });
+
+// Functie om de quiz te starten
+function startQuiz() {
+  const category = categorySelect.value;
+  const allQuestions = quizState.questionsByCategory[category];
+
+  if (!allQuestions) {
+    alert("Er zijn geen vragen voor deze categorie.");
+    return;
+  }
+
+  quizState.selectedQuestions = shuffle(allQuestions).slice(0, 5);
+  quizState.currentQuestion = 0;
+  quizState.score = 0;
+  showQuestion();
+}
+
+// Vragen willekeurig schudden
+const shuffle = (array) => array.sort(() => Math.random() - 0.5);
+
+// Een vraag weergeven
+function showQuestion() {
+  const { currentQuestion, selectedQuestions } = quizState;
+  const q = selectedQuestions[currentQuestion];
+
+  questionElement.textContent = q.question;
+  choicesElement.innerHTML = "";
+
+  q.choices.forEach((choice) => {
+    const btn = document.createElement("button");
+    btn.textContent = choice;
+    btn.onclick = () => checkAnswer(choice);
+    choicesElement.appendChild(btn);
+  });
+
+  resultElement.textContent = "";
+  nextBtn.style.display = "none";
+}
+
+// Het antwoord van de gebruiker controleren
+function checkAnswer(choice) {
+  const { currentQuestion, selectedQuestions, score } = quizState;
+  const correct = selectedQuestions[currentQuestion].answer;
+
+  if (choice === correct) {
+    resultElement.textContent = "Juist! ✅";
+    quizState.score = score + 1;
+  } else {
+    resultElement.textContent = `Fout ❌ (Juist: ${correct})`;
+  }
+
+  document.querySelectorAll("#choices button").forEach((btn) => {
+    btn.disabled = true;
+  });
+
+  nextBtn.style.display = "inline";
+}
+
+// Naar de volgende vraag gaan
+function nextQuestion() {
+  quizState.currentQuestion++;
+
+  if (quizState.currentQuestion < quizState.selectedQuestions.length) {
+    showQuestion();
+  } else {
+    questionElement.textContent = "Quiz klaar!";
+    choicesElement.innerHTML = "";
+    resultElement.textContent = `Score: ${quizState.score}/${quizState.selectedQuestions.length}`;
+    nextBtn.style.display = "none";
+  }
+}
+</code>
+            </pre>
+            <p>Laten we deze code stap voor stap uitleggen:</p>
+            <ul>
+                <li><code>const categorySelect = document.getElementById("categorySelect");</code>: Dit selecteert het
+                    categorie-selectieelement in het DOM.</li>
+                <li><code>const questionElement = document.getElementById("question");</code>: Dit selecteert het
+                    element waarin de vraag wordt weergegeven.</li>
+                <li><code>const choicesElement = document.getElementById("choices");</code>: Dit selecteert het element
+                    waarin de keuzes worden weergegeven.</li>
+                <li><code>const resultElement = document.getElementById("result");</code>: Dit selecteert het element
+                    waarin het resultaat wordt weergegeven.</li>
+                <li><code>const nextBtn = document.getElementById("nextBtn");</code>: Dit selecteert de knop voor de
+                    volgende vraag.</li>
+                <li><code>const quizState = { ... };</code>: Dit is een object dat de status van de quiz bijhoudt, zoals
+                    de geselecteerde vragen, de huidige vraag en de score.</li>
+                <li><code>fetch("src/questions.json") ...</code>: Dit laadt de vragen vanuit het JSON-bestand.</li>
+                <li><code>function startQuiz() { ... }</code>: Dit is de functie die de quiz start.</li>
+                <li><code>const shuffle = (array) => array.sort(() => Math.random() - 0.5);</code>: Dit is een functie
+                    die de vragen willekeurig schudt.</li>
+                <li><code>function showQuestion() { ... }</code>: Dit is de functie die een vraag weergeeft.</li>
+                <li><code>function checkAnswer(choice) { ... }</code>: Dit is de functie die het antwoord van de
+                    gebruiker controleert.</li>
+                <li><code>function nextQuestion() { ... }</code>: Dit is de functie die naar de volgende vraag gaat.
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Stap 5: Vragen Toevoegen</h2>
+            <p>Maak een bestand <code>questions.json</code> in de map <code>src</code> en voeg de volgende vragen toe:
+            </p>
+            <pre>
+<code>
+{
+  "coderen": [
+    {
+      "question": "Wat is HTML?",
+      "choices": ["Een programmeertaal", "Een opmaaktaal", "Een databasesysteem"],
+      "answer": "Een opmaaktaal"
+    },
+    {
+      "question": "Wat is CSS?",
+      "choices": ["Een programmeertaal", "Een stijltaal", "Een databasesysteem"],
+      "answer": "Een stijltaal"
+    }
+    // Voeg hier meer vragen toe
+  ],
+  "natuur": [
+    {
+      "question": "Wat is fotosynthese?",
+      "choices": ["Het proces waarbij planten water drinken", "Het proces waarbij planten zonlicht omzetten in energie", "Het proces waarbij planten koolstofdioxide uitstoten"],
+      "answer": "Het proces waarbij planten zonlicht omzetten in energie"
+    }
+    // Voeg hier meer vragen toe
+  ],
+  "geschiedenis": [
+    {
+      "question": "Wanneer werd de Eerste Wereldoorlog beëindigd?",
+      "choices": ["1918", "1919", "1920"],
+      "answer": "1918"
+    }
+    // Voeg hier meer vragen toe
+  ],
+  "sport": [
+    {
+      "question": "Welke sport wordt gespeeld met een racket en een shuttle?",
+      "choices": ["Tennis", "Badminton", "Tafeltennis"],
+      "answer": "Badminton"
+    }
+    // Voeg hier meer vragen toe
+  ]
+}
+</code>
+            </pre>
+            <p>Laten we deze structuur uitleggen:</p>
+            <ul>
+                <li><code>"coderen": [ ... ]</code>: Dit is een array van vragen over coderen.</li>
+                <li><code>question</code>: Dit is de vraag die wordt gesteld.</li>
+                <li><code>choices</code>: Dit is een array van keuzes die de gebruiker kan kiezen.</li>
+                <li><code>answer</code>: Dit is het juiste antwoord op de vraag.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Conclusie</h2>
+            <p>Gefeliciteerd! Je hebt nu een interactieve quiz-site. Je kunt het ontwerp verder aanpassen en meer vragen
+                toevoegen om de quiz interessanter te maken. Experimenteer en voeg je eigen functies toe.</p>
+        </section>
+
+        <section>
+            <h2>Aanvullende Tips</h2>
+            <ol>
+                <li>Test je code: Zorg ervoor dat je je quiz test in verschillende browsers om de compatibiliteit te
+                    controleren.</li>
+                <li>Voeg opmerkingen toe: Voeg opmerkingen toe in je code om uit te leggen wat elke sectie doet.</li>
+                <li>Heb plezier: Coderen is een waardevolle vaardigheid, maar vergeet niet om plezier te hebben terwijl
+                    je leert!</li>
+            </ol>
+        </section>
+    </main>
+</body>
+
+</html>

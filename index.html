@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="src/css/main.css">
+</head>
+
+<body>
+    <header class="quiz__header">
+        <h1 class="quiz__title">Quiz</h1>
+        <a href="tutorial.html" class="quiz__button quiz__button--tutorial">Tutorial</a>
+    </header>
+    <main class="quiz">
+        <div class="quiz__category">
+            <label for="categorySelect" class="quiz__label">Kies een categorie:</label>
+            <select id="categorySelect" class="quiz__select">
+                <option value="coderen">Coderen</option>
+                <option value="natuur">Natuur</option>
+                <option value="geschiedenis">Geschiedenis</option>
+                <option value="sport">Sport</option>
+            </select>
+        </div>
+
+        <button class="quiz__button quiz__button--start" onclick="startQuiz()">Start Quiz</button>
+
+        <div id="question" class="quiz__question"></div>
+        <div id="choices" class="quiz__choices"></div>
+        <div id="result" class="quiz__result"></div>
+
+        <button id="nextBtn" class="quiz__button quiz__button--next" style="display:none;"
+            onclick="nextQuestion()">Volgende vraag</button>
+    </main>
+
+    <script src="src/script.js"></script>
+</body>
+
+</html>

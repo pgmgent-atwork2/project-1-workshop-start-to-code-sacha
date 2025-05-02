@@ -1,0 +1,560 @@
+{
+  "coderen": [
+    {
+      "question": "Wat betekent HTML?",
+      "choices": [
+        "HyperText Markup Language",
+        "Home Tool Markup Language",
+        "Hyperlinks and Text Markup Language",
+        "Hyper Tool Multi Language"
+      ],
+      "answer": "HyperText Markup Language"
+    },
+    {
+      "question": "Welke tag gebruik je voor een paragraaf?",
+      "choices": ["<p>", "<div>", "<section>", "<text>"],
+      "answer": "<p>"
+    },
+    {
+      "question": "Wat doet CSS?",
+      "choices": [
+        "Voegt interactieve functies toe",
+        "Geeft stijl en layout",
+        "Geeft structuur aan de website",
+        "Maakt databases"
+      ],
+      "answer": "Geeft stijl en layout"
+    },
+    {
+      "question": "Welke kleur geeft 'color: red;'?",
+      "choices": ["Blauw", "Rood", "Groen", "Zwart"],
+      "answer": "Rood"
+    },
+    {
+      "question": "Welke taal gebruik je om logica toe te voegen?",
+      "choices": ["HTML", "CSS", "JavaScript", "Photoshop"],
+      "answer": "JavaScript"
+    },
+    {
+      "question": "Welke tag gebruik je voor een afbeelding?",
+      "choices": ["<img>", "<picture>", "<image>", "<src>"],
+      "answer": "<img>"
+    },
+    {
+      "question": "Wat betekent CSS?",
+      "choices": [
+        "Computer Style Sheets",
+        "Cascading Style Sheets",
+        "Creative Style Syntax",
+        "Color Style Script"
+      ],
+      "answer": "Cascading Style Sheets"
+    },
+    {
+      "question": "Hoe link je een CSS-bestand aan HTML?",
+      "choices": ["<css>", "<link>", "<style>", "<script>"],
+      "answer": "<link>"
+    },
+    {
+      "question": "Hoe maak je tekst vet in HTML?",
+      "choices": ["<strong>", "<b>", "<bold>", "<weight>"],
+      "answer": "<b>"
+    },
+    {
+      "question": "Wat doet 'background-color' in CSS?",
+      "choices": [
+        "Verandert de tekstkleur",
+        "Verandert de achtergrondkleur",
+        "Voegt een rand toe",
+        "Maakt de tekst groter"
+      ],
+      "answer": "Verandert de achtergrondkleur"
+    },
+    {
+      "question": "Welke CSS-eenheid staat voor pixels?",
+      "choices": ["px", "%", "em", "rem"],
+      "answer": "px"
+    },
+    {
+      "question": "Wat betekent 'console.log()' in JavaScript?",
+      "choices": [
+        "Laat iets op het scherm zien",
+        "Logt gegevens in de console",
+        "Verandert de achtergrond",
+        "Voegt een knop toe"
+      ],
+      "answer": "Logt gegevens in de console"
+    },
+    {
+      "question": "Hoe maak je een knop in HTML?",
+      "choices": ["<press>", "<btn>", "<click>", "<button>"],
+      "answer": "<button>"
+    },
+    {
+      "question": "Welke HTML-tag gebruik je voor een link?",
+      "choices": ["<link>", "<a>", "<url>", "<href>"],
+      "answer": "<a>"
+    },
+    {
+      "question": "Wat doet 'text-align: center;'?",
+      "choices": [
+        "Maakt tekst cursief",
+        "Centreert de tekst",
+        "Maakt tekst vet",
+        "Maakt tekst blauw"
+      ],
+      "answer": "Centreert de tekst"
+    },
+    {
+      "question": "Hoe start je een JavaScript-bestand?",
+      "choices": ["<script src='...'>", "<js>", "<javascript>", "<code>"],
+      "answer": "<script src='...'>"
+    },
+    {
+      "question": "Wat doet 'let' in JavaScript?",
+      "choices": [
+        "Start een functie",
+        "Maakt een variabele",
+        "Maakt een HTML-element",
+        "Voegt een stijl toe"
+      ],
+      "answer": "Maakt een variabele"
+    },
+    {
+      "question": "Wat betekent DOM?",
+      "choices": [
+        "Data Object Model",
+        "Document Object Model",
+        "Dynamic Output Mode",
+        "Document Output Model"
+      ],
+      "answer": "Document Object Model"
+    },
+    {
+      "question": "Wat doet 'if (x > 5)' in JavaScript?",
+      "choices": [
+        "Een loop starten",
+        "Een voorwaarde testen",
+        "Een tekst tonen",
+        "CSS toepassen"
+      ],
+      "answer": "Een voorwaarde testen"
+    },
+    {
+      "question": "Wat is de juiste volgorde van HTML, CSS en JS in een project?",
+      "choices": [
+        "HTML > CSS > JS",
+        "JS > CSS > HTML",
+        "CSS > JS > HTML",
+        "JS > HTML > CSS"
+      ],
+      "answer": "HTML > CSS > JS"
+    }
+  ],
+  "natuur": [
+    {
+      "question": "Wat is de grootste planeet in ons zonnestelsel?",
+      "choices": ["Aarde", "Jupiter", "Saturnus", "Mars"],
+      "answer": "Jupiter"
+    },
+    {
+      "question": "Welke boom verliest zijn bladeren in de herfst?",
+      "choices": ["Eik", "Palm", "Bamboe", "Dennenhout"],
+      "answer": "Eik"
+    },
+    {
+      "question": "Wat is het grootste dier op aarde?",
+      "choices": ["Afrikaanse olifant", "Blauwe walvis", "Giraffe", "Haai"],
+      "answer": "Blauwe walvis"
+    },
+    {
+      "question": "Hoe heet het proces waarbij planten licht omzetten in energie?",
+      "choices": ["Fotosynthese", "Verdamping", "Respiratie", "Transpiratie"],
+      "answer": "Fotosynthese"
+    },
+    {
+      "question": "Welke gas is het belangrijkste bestanddeel van de lucht die we inademen?",
+      "choices": ["Zuurstof", "Stikstof", "Koolstofdioxide", "Waterdamp"],
+      "answer": "Stikstof"
+    },
+    {
+      "question": "Wat is de grootste oceaan ter wereld?",
+      "choices": [
+        "Atlantische Oceaan",
+        "Indische Oceaan",
+        "Arctische Oceaan",
+        "Stille Oceaan"
+      ],
+      "answer": "Stille Oceaan"
+    },
+    {
+      "question": "Wat is het snelst bewegende dier op aarde?",
+      "choices": ["Cheetah", "Adelaar", "Haas", "Schaap"],
+      "answer": "Cheetah"
+    },
+    {
+      "question": "Welke vogel kan niet vliegen?",
+      "choices": ["Pinguïn", "Adelaar", "Uil", "Haan"],
+      "answer": "Pinguïn"
+    },
+    {
+      "question": "Welke soort bloem is het symbool van Nederland?",
+      "choices": ["Tulp", "Roos", "Lelie", "Zonnebloem"],
+      "answer": "Tulp"
+    },
+    {
+      "question": "Wat is de naam van het hoogste berg ter wereld?",
+      "choices": ["Mount Fuji", "K2", "Everest", "Kilimanjaro"],
+      "answer": "Everest"
+    },
+    {
+      "question": "Hoe heet de grootste woestijn ter wereld?",
+      "choices": ["Sahara", "Gobi", "Kalahari", "Antarctica"],
+      "answer": "Antarctica"
+    },
+    {
+      "question": "Wat is de naam van de warmste oceaan ter wereld?",
+      "choices": [
+        "Atlantische Oceaan",
+        "Indische Oceaan",
+        "Stille Oceaan",
+        "Zuidelijke Oceaan"
+      ],
+      "answer": "Indische Oceaan"
+    },
+    {
+      "question": "Wat is de naam van de grootste rivier ter wereld?",
+      "choices": ["Amazonerivier", "Nijl", "Yangtze", "Mississippi"],
+      "answer": "Amazonerivier"
+    },
+    {
+      "question": "Wat is het belangrijkste ingrediënt van een vulkaanuitbarsting?",
+      "choices": ["Stenen", "Gas", "Lava", "Water"],
+      "answer": "Lava"
+    },
+    {
+      "question": "Wat is het meest voorkomende element in het universum?",
+      "choices": ["Zuurstof", "Waterstof", "Koolstof", "Helium"],
+      "answer": "Waterstof"
+    },
+    {
+      "question": "Hoe heet het proces waarbij water verdampt?",
+      "choices": ["Verdamping", "Transpiratie", "Condensatie", "Precipitatie"],
+      "answer": "Verdamping"
+    },
+    {
+      "question": "Welke kleur heeft een smaragd?",
+      "choices": ["Rood", "Groen", "Blauw", "Geel"],
+      "answer": "Groen"
+    },
+    {
+      "question": "Wat is de naam van het grootste zoogdier ter wereld?",
+      "choices": [
+        "Afrikaanse olifant",
+        "Blauwe walvis",
+        "Giraffe",
+        "Dromedaris"
+      ],
+      "answer": "Blauwe walvis"
+    },
+    {
+      "question": "Wat is de naam van de snelst groeiende plant op aarde?",
+      "choices": ["Bamboe", "Munt", "Kruiden", "Paddenstoelen"],
+      "answer": "Bamboe"
+    }
+  ],
+  "geschiedenis": [
+    {
+      "question": "Wie was Napoleon?",
+      "choices": [
+        "Een keizer",
+        "Een schilder",
+        "Een wetenschapper",
+        "Een schrijver"
+      ],
+      "answer": "Een keizer"
+    },
+    {
+      "question": "Wie ontdekte Amerika?",
+      "choices": [
+        "Christoffel Columbus",
+        "Marco Polo",
+        "Vasco da Gama",
+        "Magellaan"
+      ],
+      "answer": "Christoffel Columbus"
+    },
+    {
+      "question": "Wanneer eindigde de Tweede Wereldoorlog?",
+      "choices": ["1941", "1945", "1950", "1960"],
+      "answer": "1945"
+    },
+    {
+      "question": "Wat was de Berlijnse Muur?",
+      "choices": [
+        "Een brug",
+        "Een muur die Oost- en West-Duitsland scheidde",
+        "Een paleis",
+        "Een tunnel"
+      ],
+      "answer": "Een muur die Oost- en West-Duitsland scheidde"
+    },
+    {
+      "question": "Wie was de eerste president van de Verenigde Staten?",
+      "choices": [
+        "Abraham Lincoln",
+        "George Washington",
+        "Thomas Jefferson",
+        "John Adams"
+      ],
+      "answer": "George Washington"
+    },
+    {
+      "question": "In welk jaar werd de Franse Revolutie begonnen?",
+      "choices": ["1789", "1799", "1804", "1812"],
+      "answer": "1789"
+    },
+    {
+      "question": "Wie schilderde de Mona Lisa?",
+      "choices": [
+        "Leonardo da Vinci",
+        "Pablo Picasso",
+        "Vincent van Gogh",
+        "Rembrandt"
+      ],
+      "answer": "Leonardo da Vinci"
+    },
+    {
+      "question": "Wat was de oorzaak van de Eerste Wereldoorlog?",
+      "choices": [
+        "Economische crisis",
+        "Politieke conflicten",
+        "Alliantie tussen landen",
+        "Verlies van grondgebied"
+      ],
+      "answer": "Politieke conflicten"
+    },
+    {
+      "question": "Wie was Julius Caesar?",
+      "choices": [
+        "Een Romeinse keizer",
+        "Een Griekse filosoof",
+        "Een Egyptische farao",
+        "Een Perzische koning"
+      ],
+      "answer": "Een Romeinse keizer"
+    },
+    {
+      "question": "Wie was de leider van het nationale socialisme in Duitsland?",
+      "choices": [
+        "Joseph Stalin",
+        "Adolf Hitler",
+        "Benito Mussolini",
+        "Franklin D. Roosevelt"
+      ],
+      "answer": "Adolf Hitler"
+    },
+    {
+      "question": "Welke oorlog werd gevoerd tussen 1914 en 1918?",
+      "choices": [
+        "De Tweede Wereldoorlog",
+        "De Koreaanse Oorlog",
+        "De Eerste Wereldoorlog",
+        "De Vietnamoorlog"
+      ],
+      "answer": "De Eerste Wereldoorlog"
+    },
+    {
+      "question": "Wie was de eerste man op de maan?",
+      "choices": [
+        "Neil Armstrong",
+        "Yuri Gagarin",
+        "Buzz Aldrin",
+        "Michael Collins"
+      ],
+      "answer": "Neil Armstrong"
+    },
+    {
+      "question": "In welk jaar viel de Muur van Berlijn?",
+      "choices": ["1987", "1989", "1991", "1993"],
+      "answer": "1989"
+    },
+    {
+      "question": "Wie was de laatste tsaar van Rusland?",
+      "choices": [
+        "Peter de Grote",
+        "Ivan de Verschrikkelijke",
+        "Nikolaas II",
+        "Catherine de Grote"
+      ],
+      "answer": "Nikolaas II"
+    },
+    {
+      "question": "Wie was de eerste keizer van China?",
+      "choices": ["Qin Shi Huang", "Sun Yat-sen", "Kublai Khan", "Mao Zedong"],
+      "answer": "Qin Shi Huang"
+    },
+    {
+      "question": "Waar gebeurde de Slag bij Waterloo?",
+      "choices": ["Frankrijk", "België", "Duitsland", "Nederland"],
+      "answer": "België"
+    },
+    {
+      "question": "Wie was de leider van de Sovjetunie tijdens de Koude Oorlog?",
+      "choices": [
+        "Joseph Stalin",
+        "Mikhail Gorbatsjov",
+        "Leonid Brezhnev",
+        "Vladimir Putin"
+      ],
+      "answer": "Mikhail Gorbatsjov"
+    },
+    {
+      "question": "In welk jaar werd de Declaration of Independence ondertekend?",
+      "choices": ["1776", "1800", "1845", "1900"],
+      "answer": "1776"
+    },
+    {
+      "question": "Wat is het bekendste werk van William Shakespeare?",
+      "choices": [
+        "Romeo and Juliet",
+        "The Catcher in the Rye",
+        "1984",
+        "Don Quixote"
+      ],
+      "answer": "Romeo and Juliet"
+    }
+  ],
+  "sport": [
+    {
+      "question": "Wie heeft de meeste Formule 1-wedstrijden gewonnen?",
+      "choices": [
+        "Michael Schumacher",
+        "Lewis Hamilton",
+        "Ayrton Senna",
+        "Sebastian Vettel"
+      ],
+      "answer": "Lewis Hamilton"
+    },
+    {
+      "question": "In welk jaar werd de eerste Wereldbeker Voetbal gespeeld?",
+      "choices": ["1930", "1940", "1950", "1960"],
+      "answer": "1930"
+    },
+    {
+      "question": "Wat is de langste afstand in een marathon?",
+      "choices": ["30 km", "42 km", "50 km", "100 km"],
+      "answer": "42 km"
+    },
+    {
+      "question": "Wie heeft de meeste goals gescoord in de Champions League?",
+      "choices": ["Cristiano Ronaldo", "Lionel Messi", "Raul", "Karim Benzema"],
+      "answer": "Cristiano Ronaldo"
+    },
+    {
+      "question": "Wie heeft de meeste Olympische medailles gewonnen?",
+      "choices": [
+        "Michael Phelps",
+        "Usain Bolt",
+        "Carl Lewis",
+        "Larisa Latynina"
+      ],
+      "answer": "Michael Phelps"
+    },
+    {
+      "question": "Welke sport wordt gespeeld met een shuttle?",
+      "choices": ["Tennis", "Badminton", "Volleybal", "Handbal"],
+      "answer": "Badminton"
+    },
+    {
+      "question": "Wie won de Tour de France in 2019?",
+      "choices": [
+        "Chris Froome",
+        "Egan Bernal",
+        "Vincenzo Nibali",
+        "Geraint Thomas"
+      ],
+      "answer": "Egan Bernal"
+    },
+    {
+      "question": "Welke sport wordt gespeeld op een veld van 100 meter lang?",
+      "choices": ["Honkbal", "Amerikaans voetbal", "Rugby", "Voetbal"],
+      "answer": "Amerikaans voetbal"
+    },
+    {
+      "question": "Hoeveel spelers zijn er in een standaard rugbyteam?",
+      "choices": ["11", "13", "15", "18"],
+      "answer": "15"
+    },
+    {
+      "question": "Wat is de officiële lengte van een tennisbaan?",
+      "choices": ["18 meter", "23 meter", "25 meter", "27 meter"],
+      "answer": "23 meter"
+    },
+    {
+      "question": "Wat is de maximum snelheid van een wielrenner in de Tour de France?",
+      "choices": ["50 km/h", "70 km/h", "80 km/h", "120 km/h"],
+      "answer": "80 km/h"
+    },
+    {
+      "question": "In welke stad werden de Olympische Spelen van 2008 gehouden?",
+      "choices": ["Peking", "Londen", "Athene", "Rio de Janeiro"],
+      "answer": "Peking"
+    },
+    {
+      "question": "Wie heeft de meeste Grand Slam titels in tennis?",
+      "choices": [
+        "Roger Federer",
+        "Rafael Nadal",
+        "Serena Williams",
+        "Novak Djokovic"
+      ],
+      "answer": "Rafael Nadal"
+    },
+    {
+      "question": "Wat is de naam van het internationale voetbaltoernooi voor vrouwen?",
+      "choices": [
+        "FIFA Wereldbeker",
+        "UEFA Euro",
+        "Copa América",
+        "FIFA Wereldbeker Vrouwen"
+      ],
+      "answer": "FIFA Wereldbeker Vrouwen"
+    },
+    {
+      "question": "Wie werd de oudste speler om ooit een doelpunt te maken in de Premier League?",
+      "choices": [
+        "Ryan Giggs",
+        "Teddy Sheringham",
+        "Cristiano Ronaldo",
+        "Sergio Agüero"
+      ],
+      "answer": "Teddy Sheringham"
+    },
+    {
+      "question": "Wie heeft de meeste keren de Tour de France gewonnen?",
+      "choices": [
+        "Miguel Indurain",
+        "Eddy Merckx",
+        "Bernard Hinault",
+        "Lance Armstrong"
+      ],
+      "answer": "Eddy Merckx"
+    },
+    {
+      "question": "Hoeveel spelers staan er op het veld bij een rugbywedstrijd?",
+      "choices": ["12", "13", "15", "16"],
+      "answer": "15"
+    },
+    {
+      "question": "Wie heeft de meeste doelpunten gescoord in de Europese competitie?",
+      "choices": ["Cristiano Ronaldo", "Lionel Messi", "Raul", "Pele"],
+      "answer": "Cristiano Ronaldo"
+    },
+    {
+      "question": "Wat is de standaard lengte van een voetbalveld?",
+      "choices": ["100m", "110m", "120m", "130m"],
+      "answer": "110m"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+.tutorial {
+  padding: 2rem 6rem;
+}
+
+li {
+  margin-left: 2rem;
+}
+ol {
+  margin-left: 2rem;
+  & li {
+    margin-left: 1rem;
+  }
+}
+section {
+    margin-top: 3rem;
+}
